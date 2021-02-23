@@ -9,19 +9,28 @@ import img from '../../../../public/profile.jpg'
 
 export default function Cover() {
   return (
-    
-  <Masthead>
-      
-<MastheadImage>
-<>
-     <Image
-       src={img}
-       alt="My Image"
-       width={300}
-       height={300}
-     />
-   </>  
-</MastheadImage>
+
+    <Masthead>
+
+
+      <div class="container" >
+        <div class="stars" >
+          <div class="stars2">      
+          </div>
+        </div>
+      </div>
+
+
+      <MastheadImage>
+        <>
+          <Image
+            src={img}
+            alt="My Image"
+            width={300}
+            height={300}
+          />
+        </>
+      </MastheadImage>
 
       <Text
         variant="title"
