@@ -32,6 +32,7 @@ export default function Cover() {
         </>
       </MastheadImage>
 
+
       <Text
         variant="title"
         tag="h1"
@@ -51,6 +52,16 @@ export default function Cover() {
 
         Front-end Developer
       </Text>
+
+
+      <div class="container" >
+        <div class="stars" >
+          <div class="stars2">      
+          </div>
+        </div>
+      </div>
     </Masthead>
+
+    
   );
 }

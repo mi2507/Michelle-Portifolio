@@ -34,7 +34,7 @@ export default function Footer(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <span> &copy; Michelle R.| 2021 </span>
+      <span>Michelle R. | 2021 </span>
       
         <a href="https://www.linkedin.com/in/michelle-regina-86116733/">
         <img src="https://raw.githubusercontent.com/madalossolaura/portfolio/da4be2647bd00a12091757671f41900bc14115ac/public/images/icon_linkedin.svg" alt="Linkedin"/>

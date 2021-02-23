@@ -19,16 +19,16 @@ export default function Projects() {
             </SectionTitle>
             <Grid.Container>
                 <Grid.Row>
-                    <Grid.Col value={{ xs: 10, md: 5, lg: 3}}>
+                    <Grid.Col value={{ xs: 10, md: 5, lg: 4}}>
                         <Card />
                     </Grid.Col>
-                    <Grid.Col value={{ xs: 10, md: 5, lg: 3}}>
+                    <Grid.Col value={{ xs: 10, md: 5, lg: 4}}>
                         <Card />
                     </Grid.Col>
-                    <Grid.Col value={{ xs: 10, md: 5, lg: 3}}>
+                    <Grid.Col value={{ xs: 10, md: 5, lg: 4}}>
                         <Card />
                     </Grid.Col>
-                    <Grid.Col value={{ xs: 10, md: 5, lg: 6}}>
+                    <Grid.Col value={{ xs: 10, md: 5, lg: 4}}>
                         <Card />
                     </Grid.Col>
                 </Grid.Row>

@@ -5,10 +5,10 @@ const Masthead = styled.header`
   font-family: 'Akaya Telivigala', cursive;
  
   background: linear-gradient(0, #120c56, #000000);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
-    background-position: center top;
-    background-size: cover;
+    /* background-position: center top;
+    background-size: cover; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,9 @@ const Masthead = styled.header`
     color:#ffffff;
 
     .container{
+    /* display: flex; */
+    /* display: inline-flex; */
+    display: contents;
     overflow: hidden;
     position: absolute;
     top: 0px;
@@ -113,6 +116,10 @@ const Masthead = styled.header`
     ${breakpointsMedia({
         xs: css`
             padding: 90px 0;
+            .stars .stars2{
+              /* display: contents; */
+            }
+
         `,
         md: css`
             padding: 16% 0;
