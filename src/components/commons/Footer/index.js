@@ -7,7 +7,6 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px; 
   padding-right: 28px;
   padding-left: 28px;
   background-color:#172758;
@@ -35,7 +34,7 @@ export default function Footer(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <span>Michelle Regina | 2021</span>
+      <span> &copy; Michelle R.| 2021 </span>
       
         <a href="https://www.linkedin.com/in/michelle-regina-86116733/">
         <img src="https://raw.githubusercontent.com/madalossolaura/portfolio/da4be2647bd00a12091757671f41900bc14115ac/public/images/icon_linkedin.svg" alt="Linkedin"/>

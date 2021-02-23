@@ -8,7 +8,6 @@ import Footer from '../src/components/commons/Footer'
 
 export default function Home() {
   return (
-   
     <Box>
     <Cover />
     <MenuWrapper /> 

@@ -28,6 +28,7 @@ margin-left: 16px;
 `;
 
 MenuWrapper.RightSide = styled.div `
+
   list-style: none;
   display: flex;
     justify-content: center;
@@ -40,6 +41,7 @@ MenuWrapper.RightSide = styled.div `
       /* } */
   }
   a {
+      font-family: 'Akaya Telivigala',cursive;
       text-transform: uppercase;
       text-align: center;
       display: block;

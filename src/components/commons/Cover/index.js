@@ -1,18 +1,26 @@
 import React from "react";
 import Text from "../../foundations/Text";
-import Masthead from './styles/Masthead'
-import MastheadImage from './styles/MastheadImage'
+import Masthead from './styles/Masthead';
+import MastheadImage from './styles/MastheadImage';
+import Image from 'next/image'
+import img from '../../../../public/profile.jpg'
+
 
 
 export default function Cover() {
   return (
     
-    <Masthead>
+  <Masthead>
       
 <MastheadImage>
-  {/* <h1>Teste </h1> */}
-  <img src="https://raw.githubusercontent.com/madalossolaura/portfolio/da4be2647bd00a12091757671f41900bc14115ac/public/images/icon_linkedin.svg" alt="Linkedin"/>
-  
+<>
+     <Image
+       src={img}
+       alt="My Image"
+       width={300}
+       height={300}
+     />
+   </>  
 </MastheadImage>
 
       <Text
@@ -21,7 +29,6 @@ export default function Cover() {
         textAlign="center"
         color="primary.main"
         marginBottom="0">
-
 
         Michelle Regina
 
