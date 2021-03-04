@@ -34,7 +34,7 @@ MenuWrapper.RightSide = styled.div `
     justify-content: center;
     padding: 16px 40px;
     background-color: 
-    #0e1537;
+    #fea569;
    li {
       /* &:first-child { */
         margin: 16px;

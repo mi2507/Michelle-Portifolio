@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SectionTitle = styled.div`
-    color: #172758;
+    color: #122940;
     font-family: 'Akaya Telivigala', cursive;
     font-size: 36px;
     text-align: center;

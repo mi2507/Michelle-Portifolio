@@ -10,16 +10,16 @@ import img from '../../../../public/profile.jpg'
 export default function Cover() {
   return (
 
+
     <Masthead>
 
-
-      <div class="container" >
+      {/* <div class="container" >
         <div class="stars" >
-          <div class="stars2">      
+          <div class="stars2">
           </div>
         </div>
-      </div>
 
+      </div> */}
 
       <MastheadImage>
         <>
@@ -53,15 +53,15 @@ export default function Cover() {
         Front-end Developer
       </Text>
 
-
+{/* 
       <div class="container" >
         <div class="stars" >
-          <div class="stars2">      
+          <div class="stars2">
           </div>
         </div>
-      </div>
+      </div> */}
     </Masthead>
 
-    
+
   );
 }

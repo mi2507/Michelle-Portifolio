@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   padding-right: 28px;
   padding-left: 28px;
-  background-color:#121c44;
+  background-color:#fea569;
   color: #ffffff;
   img {
     width: 32px;

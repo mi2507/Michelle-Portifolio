@@ -3,17 +3,19 @@ import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 const Masthead = styled.header`
   font-family: 'Akaya Telivigala', cursive;
+  background-image: url("https://images.unsplash.com/photo-1614368558359-9ab23db1bab3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
  
-  background: linear-gradient(0, #120c56, #000000);
-    /* background-repeat: no-repeat; */
+  /* background: linear-gradient(0, #120c56, #000000); */
+    background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-position: center top;
-    background-size: cover; */
+    /* background-size: cover; */ 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color:#ffffff;
+    background-size: cover;
 
     .container{
     /* display: flex; */
@@ -28,9 +30,13 @@ const Masthead = styled.header`
     height: 100%;
     perspective: 340px;
     opacity: 0.7
+    /* width: 550px;
+  height: 150px; */
+  /* background: linear-gradient(0, #120c56, #000000); */
 }
 
 .stars{
+  margin: 0 auto;
   position: relative;
   width: 3px;
   height: 3px;
