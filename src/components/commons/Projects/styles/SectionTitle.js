@@ -6,6 +6,10 @@ const SectionTitle = styled.div`
     font-size: 36px;
     text-align: center;
     margin: 0 0 20px;
+    text-decoration: underline;
+    :hover{
+        color: #122940;
+    }
 `;
 
 export default SectionTitle;

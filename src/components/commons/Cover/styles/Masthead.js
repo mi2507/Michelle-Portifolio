@@ -3,7 +3,7 @@ import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 const Masthead = styled.header`
   font-family: 'Akaya Telivigala', cursive;
-  background-image: url("https://images.unsplash.com/photo-1614368558359-9ab23db1bab3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
+  background-image: url("https://images.unsplash.com/photo-1456154875099-97a3a56074d3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
  
   /* background: linear-gradient(0, #120c56, #000000); */
     background-repeat: no-repeat;
