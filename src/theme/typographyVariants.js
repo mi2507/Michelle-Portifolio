@@ -1,7 +1,7 @@
 const typographyVariants = {
   // [title]
   title: {
-    fontSize: '42px',
+    fontSize: '36px',
     fontWeight: '300',
     lineHeight: 1.25, // 125%
   },
@@ -35,7 +35,7 @@ const typographyVariants = {
   },
   // [smallestException]
   smallestException: {
-    fontSize: '12px',
+    fontSize: '14px',
     fontWeight: '400',
     lineHeight: 1, // 100%
   },

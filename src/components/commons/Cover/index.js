@@ -9,16 +9,12 @@ import img from '../../../../public/profile.jpg'
 
 export default function Cover() {
   return (
-
-
     <Masthead>
-
       <div class="container" >
         <div class="stars" >
           <div class="stars2">
           </div>
         </div>
-     
 
       <MastheadImage>
         <>

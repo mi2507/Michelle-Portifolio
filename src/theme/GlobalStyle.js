@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Akaya Telivigala', cursive;
+    font-family: ${({ theme }) => theme.fontFamily};
   }
   /* Full height layout */
   html, body {
@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
+  
 `;
 
 export default GlobalStyle;

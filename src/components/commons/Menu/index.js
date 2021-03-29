@@ -1,42 +1,26 @@
 import React from 'react';
-import Text from '../../foundations/Text';
-import menuWrapper from './styles/menuWrapper'
+import { MenuWrapper } from './styles/MenuWrapper';
+import { Text } from '../../foundations/Text';
 
+export default function Menu() {
+  return (
+    <MenuWrapper>
 
-const links = [
-  {
-    texto: 'Inicio',
-    url: '/inicio',
-  },
-    {
-      texto: 'Sobre',
-      url: '/sobre',
-    },
-    {
-      texto: 'Contato',
-      url: '/contato',
-    },
-  ];
+      <MenuWrapper.CentralSide as="ul">
+        &#60; /Mi &#62;
+        {[
+          { url: '/', name: 'Home' },
+          { url: '#About', name: 'About' },
+          { url: '/Contacts', name: 'Contacts' },
 
-  export default function Menu() {
-    return (
-      <menuWrapper>
-       
-        <menuWrapper.LeftSide>
-       
-        </menuWrapper.LeftSide>
-       
-        <menuWrapper.RightSide>
-       
-        {links.map((link) => (
-            <li key={link.url}>
-              <Text variant="smallestException" tag="a" href={link.url}>
-                {link.texto}
-              </Text>
-            </li>
-            
-          ))}
-        </menuWrapper.RightSide>
-      </menuWrapper>
-    );
-  }
+        ].map((link) => (
+          <li key={link.url}>
+            <Text variant="smallestException" tag="a" href={link.url}>
+              {link.name}
+            </Text>
+          </li>
+        ))}
+      </MenuWrapper.CentralSide>
+    </MenuWrapper>
+  );
+}

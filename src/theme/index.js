@@ -16,7 +16,7 @@ export const colors = {
   },
   primary: {
     main: {
-      color: '#831f1d',
+      color: '#545454',
       contrastText: '#fff',
     },
   },
@@ -28,11 +28,11 @@ export const colors = {
   },
   tertiary: {
     main: {
-      color: '#070C0E',
+      color: '#3f3f3f',
       contrastText: '#fff',
     },
     light: {
-      color: '#88989E',
+      color: '#6a6a6a',
       contrastText: '#fff',
     },
   },
@@ -40,7 +40,6 @@ export const colors = {
     dark: {},
   },
 };
-
 
 export const breakpoints = {
   xs: 0,

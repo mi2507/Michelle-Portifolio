@@ -1,6 +1,11 @@
+/* eslint-disable func-names */
+/* eslint-disable indent */
+
 import { breakpointsMedia } from './breakpointsMedia';
 
 function propToStyle(propName) {
+  // eslint-disable-next-line func-names
+  // eslint-disable-next-line consistent-return
   return function (props) {
     const propValue = props[propName];
 
@@ -9,7 +14,7 @@ function propToStyle(propName) {
         [propName]: propValue,
       };
     }
-
+   // eslint-disable-next-line indent
    if (typeof propValue === 'object') {
       return breakpointsMedia({
         xs: {

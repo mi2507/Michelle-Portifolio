@@ -1,24 +1,21 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
-
-const theme = {
-  colors: {
-    primary: '#1a4392',
-  },
-}
+import { ThemeProvider } from 'styled-components'
+import theme from '../src/theme/index';
+import GlobalStyle from '../src/theme/GlobalStyle';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
+    <Head>
+    <title>Portifólio Mi</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet"
+      />
+    </Head>
+
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
