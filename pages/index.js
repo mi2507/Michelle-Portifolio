@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable indent */
+/* eslint-disable react/jsx-indent */
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-trailing-spaces */
@@ -24,25 +27,23 @@ export default function Home() {
     }}
     >
 
-      <Modal 
-        isOpen={isModalOpen}
-        onClose={() => {
+  <Modal
+    isOpen={isModalOpen}
+    onClose={() => {
           setModalState(false);
-        }}
-      >
-        
-        {(propsDoModal) => {
+    }}
+  >
+        {(propsDoModal) => (
           <Box
-            backgroundColor="blue"
-          // eslint-disable-next-line react/jsx-indent-props
-          // eslint-disable-next-line react/jsx-props-no-spreading
+            backgroundColor="white"
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...propsDoModal}
           >
             <div>
-              nosso conteudo pro modal
+              Nosso conteúdo pro modal
             </div>
-          </Box>;
-        }}
+          </Box>
+        )}
       </Modal>
 
       <Menu />
