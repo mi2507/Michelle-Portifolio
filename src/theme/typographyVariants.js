@@ -11,7 +11,7 @@ const typographyVariants = {
     lineHeight: 1.25, // 125%
   },
   titleXS: {
-    fontSize: '20px',
+    fontSize: '26px',
     fontWeight: '300',
     lineHeight: 1.25, // 125%
   },
@@ -23,7 +23,7 @@ const typographyVariants = {
   },
   // [paragraph1]
   paragraph1: {
-    fontSize: '16px',
+    fontSize: '18px',
     fontWeight: '400',
     lineHeight: 1.25, // 125%
   },
@@ -35,7 +35,7 @@ const typographyVariants = {
   },
   // [smallestException]
   smallestException: {
-    fontSize: '14px',
+    fontSize: '18px',
     fontWeight: '400',
     lineHeight: 1, // 100%
   },
