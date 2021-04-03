@@ -37,7 +37,7 @@ export const Grid = {
     flex-wrap: wrap;
     padding-right: 38px;
     padding-left: 43px;
-    width: 100%
+    width: 100%;
   `,
   Col: styled.div`
     padding-right: 16px;

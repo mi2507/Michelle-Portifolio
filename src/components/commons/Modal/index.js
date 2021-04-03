@@ -1,8 +1,11 @@
 /* eslint-disable react/jsx-indent-props */
 import React from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-duplicates
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
+// eslint-disable-next-line import/no-duplicates
+import { createGlobalStyle } from 'styled-components';
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -33,6 +36,12 @@ const ModalWrapper = styled.div`
   }}
 `;
 
+// eslint-disable-next-line no-undef
+const LockScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
@@ -45,6 +54,8 @@ function Modal({ isOpen, onClose, children }) {
         }
       }}
     >
+      {isOpen && <LockScroll />}
+
       <motion.div
       variants={{
         open: {

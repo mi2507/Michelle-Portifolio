@@ -1,9 +1,9 @@
+/* eslint-disable no-undef */
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariants } from '../../foundations/Text/index';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import propToStyle from '../../../theme/utils/propToStyle';
-
 
 const ButtonDefault = css`
   color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
@@ -20,6 +20,7 @@ export const Button = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius};
   
   ${TextStyleVariants.smallestException}
+  // eslint-disable-next-line no-undef
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
   &:hover,
   &:focus {
@@ -27,15 +28,22 @@ export const Button = styled.button`
   }
 
   ${breakpointsMedia({
-  xs: css`
+    xs: css`
     ${TextStyleVariants.smallestException}
     `,
-  md: css`
+    md: css`
      ${TextStyleVariants.paragraph1}
     `,
 
-})}
+  })}
 
+&:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+  ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+  `};
   ${propToStyle('margin')}
   ${propToStyle('display')}
-`; 
+`;
