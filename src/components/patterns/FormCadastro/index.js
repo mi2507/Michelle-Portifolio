@@ -1,17 +1,31 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-indent */
 import React from 'react';
 // eslint-disable-next-line import/no-unresolved
+import { Lottie } from '@crello/react-lottie';
 import { Box } from '../../commons/Box';
 // eslint-disable-next-line import/extensions
 import { Grid } from '../../foundations/layout/Grid';
 import { Button } from '../../commons/Button';
 import TextField from '../../forms/TextField';
 import { Text } from '../../foundations/Text';
+import errorAnimation from './animations/error.json';
+import successAnimation from './animations/success.json';
+
+const formStates = {
+  DEFAULT: 'DEFAULT',
+  LOADING: 'LOADING',
+  DONE: ' DONE',
+  ERROR: 'ERROR',
+};
 
 // eslint-disable-next-line space-before-blocks
 function FormContent(){
+  const [isFormSubmited, setIsFormSubmited] = React.useState(false);
+  const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
+
   const [userInfo, setUserInfo] = React.useState({
     name: '',
     email: '',
@@ -32,8 +46,36 @@ function FormContent(){
   return (
         <form onSubmit={(event) => {
           event.preventDefault();
+
+          setIsFormSubmited(true);
+
+          const userDTO = {
+            name: userInfo.name,
+            email: userInfo.email,
+            message: userInfo.message,
+          };
           // eslint-disable-next-line no-console
-          console.log('form ok');
+          fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userDTO),
+          })
+            .then((respostaDoServidor) => {
+              if (respostaDoServidor.ok) {
+                return respostaDoServidor.json();
+              }
+              throw new Error('It was not possible to send your message');
+            })
+            .then((respostaConvertidaEmObjeto) => {
+              setSubmissionStatus(formStates.DONE);
+              console.log('resp teste');
+            })
+            .catch((error) => {
+              setSubmissionStatus(formStates.ERROR);
+              console.log('error');
+            });
         }}
         >
 
@@ -78,6 +120,31 @@ function FormContent(){
             >
                 enviar &gt;
             </Button>
+            { isFormSubmited && submissionStatus === formStates.DONE && (
+               <Box>
+               <Lottie
+                 width="150px"
+                 height="150px"
+                 config={{ animationData: successAnimation, loop: false, autoplay: true }}
+               />
+
+               </Box>
+            )}
+
+           {isFormSubmited && submissionStatus === formStates.ERROR && (
+             <Box
+               display="flex"
+               justifyContent="center"
+               alignItems="center"
+             >
+               <Lottie
+                 width="150px"
+                 height="150px"
+                 config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+               />
+
+             </Box>
+           )}
 
         </form>
   );
@@ -98,7 +165,7 @@ export default function FormCadastro({ propsDoModal }) {
           flex={1}
           value={{ xs: 12, md: 5, lg: 4 }}
         >
-          <Box 
+          <Box
             boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
             display="flex"
             flexDirection="column"
@@ -117,7 +184,5 @@ export default function FormCadastro({ propsDoModal }) {
           </Box>
         </Grid.Col>
       </Grid.Row>
-    );
-  }
-
- 
+  );
+}
