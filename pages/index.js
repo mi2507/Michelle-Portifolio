@@ -77,7 +77,7 @@ export default function Home() {
                   md: 'left',
                 }}
               >
-                Michelle Regina | Front-end Developer
+                Michelle Regina | Front-end Developer teste
               </Text>
               <Text
                 variant="paragraph1"
